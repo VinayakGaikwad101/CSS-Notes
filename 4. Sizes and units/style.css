@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* actual width of element=width+padding+border  */
+  /* actual height of element=height+padding+border  */
+  /* so if we use box sizing, we include border and padding inside the actual height/width of the element */
+  /* without box sizing, if we set height:100px, then it is actual height=100pxheight+ border+padding, so element appears bigger  */
+  /* but if we use box sizing border box and height:100px, then actual height= 100px=height+padding+border  */
+}
+
+p {
+  /* 1px is 1/96th of an inch  */
+
+  /* font size is 16px by default */
+  font-size: 32px;
+  /* we avoid absolute text sizes for text, as it is not responsive */
+
+  /* absolutee values are used elsewhere, eg:  */
+}
+
+h1 {
+  border: 4px dashed red;
+  /* here absolute value can be used, but not for text  */
+}
+
+/* not agaon, dont set % as font sizes, as they are relative to another quantity */
+
+/* %generally used to control size of objects(specificallly width as height is self adjusted by height of webpage ) */
+
+/* h1 is a block element, with width 100% */
+
+h1 {
+  width: 50%;
+}
+
+header {
+  width: 50%;
+  /* header is parent of the head, so it inherits width from header */
+}
+
+/* rem is used for font size, root em, and only em means it inherits from its parent by default is 1rem=16px and em is not used for text, em is used for margin and padding */
+
+p {
+  font-size: 2rem;
+  /* remember that rem is not relative, so it is not affeected by the sizee of its parent element */
+  width: 40ch;
+  /* 40 char per line  */
+}
+
+/* summary:  */
+/* rem=text size */
+/* em=margin and padding */
+/* %= positioning using height and width */
+/* fixed like px= border, etc */
+/* ch= for magazines, blogs, etc. It is n characterss per line  */
+/* vh and vw are viewport and 1vw = 1% of the width of any device's browser window, exremely similar to % */

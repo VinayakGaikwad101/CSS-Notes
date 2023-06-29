@@ -1,0 +1,51 @@
+/* h1 {
+  border: 4px dashed red;
+  width: 50%;
+  padding: 0.5em;
+} */
+
+/* mbpc: margin>border>padding>content out to in  */
+
+/* browser gives additional margin and padding to us, we can change it to 0, from default(content box) to border box so padding and border are included within actual height of the element  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* this shld be at top  */
+
+/* after border box, if we set width to 400px, now total width= border+padding+content=400px, it does not include margin */
+/* h1 {
+  width: 400px;
+} */
+
+.container,
+.circle {
+  border: 10px double red;
+  /* width: 400px; */
+  font-size: 1.5rem;
+  /* margin-top: 1.5em; */
+  /* margin-left: 1.5em; */
+  /* margin-right: 1.5em; */
+  /* margin-bottom: 1.5em; */
+  /* shprtcut for above is  */
+  margin: 1.5em;
+  padding: 1.5rem;
+  /* above can have 4 values top right bottomm nd left, same for border */
+  /* there is also padding left, margin left, border left right top bottom etc then we also have eg: border-top-width, then we also have border: 5px solid red, then we have border-top-style: dotted etc, then border-top-color  */
+
+  /* we have another selector just like border, called  outine, but difference is that it doeesnt take up space(not part of box model like outline: 2px solid red) an then outline-offset: 10px it can be -ve or +ve and it draws a line 10px out(+ve) or 10 px inside (-ve)*/
+}
+
+/* making a circle  */
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50px;
+  /* below to centre a div  */
+  margin-left: auto;
+  margin-right: auto;
+  /* above for centering a div  */
+}

@@ -1,0 +1,6 @@
+p {
+  color: rgb(203, 77, 77);
+  /* no need of ; except for more than one declaration */
+}
+
+/* p s selector, color is property and property value is rgb xyz and property and property value together is a declaration, and the selector+declaration is called a rule/ruleset */

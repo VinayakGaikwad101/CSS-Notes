@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  font-size: 1.5rem;
+  min-height: 200vh;
+  background-color: cadetblue;
+}
+
+.outer-container {
+  border: 3px dashed black;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid blue;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: white;
+  padding: 1rem;
+}
+
+.absolute {
+  background: black;
+  /* position: static; */
+  /* static position is default  */
+  position: absolute;
+  /* this position is relative to browser window, if we set position: relative; for outer box, this div will move inside it if we set position:relative; for the inner container then this div would move within that, but it is moving relative to the browser because by default the position of the other elements is static and not relative(body is always relative)  */
+  top: 0;
+  left: 0;
+}
+
+.relative {
+  background: green;
+  position: relative;
+  /* relative position means it is relative to its parent container only  */
+  top: 100px;
+  left: 100px;
+}
+
+.fixed {
+  background-color: brown;
+  position: fixed;
+  /* fixed means it will stay there even if the webpage is moved  */
+  top: 100px;
+}
+
+/* for top: more z-index and for bottom: z-index lower  */
+
+.sticky {
+  background-color: indigo;
+  position: sticky;
+  top: 0px;
+  /* means top se kitna dur hone pe wo fix hona chaiye, the above setting works for all nav bars that are present at the top  */
+}
+
+

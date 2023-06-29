@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: grid;
+  place-content: center;
+}
+
+div:first-child {
+  background-color: dodgerblue;
+  /* transform: translateX(-50%); */
+  /* transform: rotateX(45deg); */
+  /* note that this rotate is not rotating this div, but shortening it, like a page of paper falling back by 45deg, so it shortens, so 90deg will make it dissappear, and 180 deg will make it upside down */
+  /* transform: rotateY(); works from left to right like a door, so it becomes thinner  */
+  /* transform: rotateZ(45deg); */
+  /* rotaeZ rotates it like a clock, which is desired */
+
+  /* transform: scaleX(120%); */
+  /* this makes it grow in x  */
+  /* scaleY expands in y */
+  /* we can also use transform:scale(x%,y%) */
+
+  /* transform: skewX(-18deg); */
+  /* the above gives a parallelogram like shape  */
+
+  /* transform:skewY(-18deg); also gives a parallelogram  */
+  /* we also have transform: skew(xdeg,ydeg); */
+}
+
+div:nth-child(2) {
+  background-color: yellow;
+  /* transform: translateY(-2rem); */
+}
+
+div:nth-child(3) {
+  background-color: green;
+  /* transform: translate(100%, -5rem); */
+  /* translate(xvalue,yvalue) */
+}
+
+/* below is most imp code in css  */
+div:hover {
+  transform: rotateZ(360deg);
+  background-color: midnightblue;
+  color: goldenrod;
+  transition-property: background-color, transform, color;
+  /* transition property is given the value which is to be transitioned  */
+  transition-duration: 2s, 3s, 5s;
+  /* we can give even only 1 value 2s here, so both will have same duration  */
+  /* transition duration is the time it takes to change from original to the required state, ie itll take 2s to change from the original color to change t midnight blue  */
+  transition-delay: 0.06s;
+  /* delay means after hovering after how much 
+  tieme the transition should start  */
+
+  transition-timing-function: ease-in-out;
+  /* ease is default, starts slow, and finishes fast  */
+  /* linear means all at equal phase, no slowing or fasting of the transition  */
+}
+/* above is most imp code in css  */
+
+.animate {
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 999;
+  /* repeat 5 times */
+  animation-direction: alternate;
+  /* alternate means it will transition to normal properly  */
+  /* defsult is normal  */
+
+  animation-fill-mode: forwards;
+  /* default is backwards, ie it goes to green  */
+}
+/* animations are different, no need of hover  */
+/* defininf animation below the animation */
+/* put animation name  */
+@keyframes slide {
+  /* at the beginning */
+  0% {
+    transform: translateX(0);
+  }
+  /* one third way  */
+  33% {
+    transform: translateY(600px) rotate(180deg);
+    /* no need of commas here  */
+  }
+
+  66% {
+    transform: translateY(-600px) rotate(-180deg);
+  }
+  100% {
+    transform: translateX(0);
+    background-color: blueviolet;
+  }
+}

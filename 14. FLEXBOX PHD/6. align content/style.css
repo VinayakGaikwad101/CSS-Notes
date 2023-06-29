@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 600px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+  height: 400px;
+}
+.item1 {
+  background: orangered;
+}
+.item2 {
+  background: yellowgreen;
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: blue;
+}
+.item5 {
+  background: red;
+}
+.item6 {
+  background: purple;
+}
+.item7 {
+  background: black;
+}
+.item8 {
+  background: brown;
+}
+
+.items {
+  margin: 10px;
+  padding: 1rem;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* align items is for single row, align content is for double row  */
+  /* align content default is stretch  */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+  /* align content used only if children are wrapped, else we dont need to use this, we then use align items instead. align content properties(almost all) only if wrap is going on, else use align items only  */
+}

@@ -1,0 +1,54 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px dotted red;
+  background-color: blue;
+} */
+
+* {
+  border: 2px solid red;
+}
+
+body {
+  padding: 10%;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* default is serif, is font name has space use quotes */
+}
+
+p {
+  text-decoration: underline;
+  /* default is none */
+  text-transform: capitalize;
+  /* upperase lowercase etc  */
+  /* text-align: left; is default */
+  text-align: right;
+  /* justiy means left+right align  */
+  text-indent: 2em;
+  /* em is used for text indent  */
+  line-height: 1.5;
+  /* 1.2 is default line height */
+  letter-spacing: 0.1em;
+  word-spacing: 1em;
+  font-weight: 900;
+  /* 400 is default */
+  font-style: italic;
+  /* oblique is strong italic, default is normal */
+}
+
+/* always set font size using rem  */
+/* but form elements did not inherit the font size, so we will do:  */
+
+/* 
+}
+
+input,
+button,
+label {
+  font-size: inherit;
+  color: inherit;
+} */
+
+
+/* we can use fonts.google.com to use linked fonts and */

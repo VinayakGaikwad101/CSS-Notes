@@ -1,0 +1,53 @@
+* {
+  border: 2px solid red;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: chartreuse;
+}
+
+.block1 {
+  width: 30vw;
+  height: 30vh;
+  border: 2px solid red;
+  background-color: cadetblue;
+  color: white;
+  padding: 1em;
+  float: left;
+  /* float means it will wrap itself around others at left  */
+  margin-right: 2em;
+  margin-bottom: 2em;
+  /* we apply margin to div instead of the p bc margin is not aplied to p as it is already itself a bit on the right side  */
+}
+.block2 {
+  width: 30vw;
+  height: 30vh;
+  border: 2px solid red;
+  background-color: cadetblue;
+  color: white;
+  padding: 1em;
+  float: right;
+  /* float means it will wrap itself around others at left  */
+  margin-left: 2em;
+  margin-top: 2em;
+  /* we apply margin to div instead of the p bc margin is not aplied to p as it is already itself a bit on the right side  */
+}
+
+.clear {
+  clear: both;
+  /* clear can take left, right or both */
+  /* clear is opositr of float, it results in unwrapping an element  */
+}
+
+/*   block1 float is not within the block of p, so to bring them together, we can fix this using 2 approaches: 
+approach 1) old: overflow:auto 
+approach 2: new: display:flow-root
+both rules in the parent element, here it is section  */
+
+section {
+  overflow: auto;
+  /* not recomended */
+  display: flow-root;
+}

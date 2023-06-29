@@ -1,0 +1,57 @@
+/* a:hover,a:focus,a:visited,a:active are pseudo classes, these indicate state of the element  */
+
+/* a:active is when held down  */
+
+/* if we have to do:
+nav a:hover,
+nav a:focus {} */
+
+/* instead of above, we can target multiple pseudo classes inside nav using the :is selector  
+this way we dont have to repeatedly write nav, and this makes our code dry(do not repeat yourself), and this collects the specifities and adds them up, we can replace the :is with :where if we dont want to deal with the specificity bs
+*/
+
+/* nav :is(a:hover,a:focus) {} */
+
+/* we can also replace a:link,a:visited{} with a:any-link{}, this targets all anchors that are linked to a link and the visited ones too!*/
+
+/* if we do div:target{border:2px solid red;}
+ then the div which we have seleccted/ are viewin onn our screen then it will change its biorder to red  */
+
+/* to target images having alt attribute(attribute selectors) we do:  */
+
+/* img[alt] {} */
+/* syntax: element_name[attribute_name] {css rule} */
+
+/* similarly, to target img no having alt attribute, we can do:  */
+/* img:not([alt]) {} */
+/* note that after :not we put [alt] inside the () */
+/* not can be used for other things as well  */
+
+/* we can do img:nth-child(enter here the number of child to be selected, 1 for first) */
+/* similrly, img:last-child directly selects the last child  */
+
+/* :nth-child() also takes even or odd as the value  */
+
+/* note that these do not select the child, but directly the img, and not the child */
+
+/* w can also add text/emoji/anything before or after anything, eg here figcaption using :before or :after  */
+/* figcaption::after{content:'This goes after the original caption'} */
+/* figcaption::before{content:'This goes beforee the original caption'} */
+/* note that we used :: instead of the regulr : as this is a pseudo element and not a pseudo class ( we add this element to the webpage, and hence it cant be selected by the cursor on the webpage by the user ) */
+
+/* we can also do:  */
+/* figcaption::before{content:open-quote;} */
+/* this adds an " at the start of the figcaption  */
+/* similarly:  */
+/* figcaption::after{content:close-quote}; */
+/* now we do this generally as we can style these quotes and make them larger, we do this by directly setting their size in the ::before and ::after, and target the text inside these(in our case figcaption) separately and do it:
+figcaption{
+    position:relative;
+    z-index:1;
+    
+    the position makes sure that they are not affected by the sizes we specified in the before and the after, and a higher z-indezx makes sure the text is properly visible to us 
+} */
+
+/* we can target first letter of any text body like p using this pseudo element: */
+/* p::first-letter{} */
+/* we also have ::first-line{} */

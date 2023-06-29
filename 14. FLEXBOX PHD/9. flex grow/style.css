@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 300px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+  height: 200px;
+}
+.item1 {
+  background: orangered;
+  flex-grow: 1;
+}
+.item2 {
+  background: yellowgreen;
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: hotpink;
+  flex-grow: 2;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+/* flexgrow is used for width, it is directly applie to the elementss inside the container, in our case we can apply in tthe .items or individually to .item1,etc */
+
+/* means width is 1x the original+some,  means width is 2x the originsl, etc */

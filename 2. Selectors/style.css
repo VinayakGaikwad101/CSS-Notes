@@ -1,0 +1,61 @@
+/* css, cascading style sheet, top to bottom */
+
+/* css works on specificity, so only more specific one  will be applied    */
+
+/* if style not applied, inspect>element>select it>styles and see which rules are crossed  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* univeral selector, css reset */
+  font-family: monospace;
+  /* sets font  */
+}
+
+/* only one body element per page and only 1 main selector perpage  */
+body {
+  font-size: 22px;
+  /* we set this for body selector, but since font size is inheritable property, it is inherited by children of body element, in this case it is h1, h2 and ps  */
+
+  /* generally all font and typography properties are inherited  */
+
+  /* eg, a border: 2px solid blck would put a border around the outer complete box only, but if we do it in universal selector, a border is created around every element; */
+
+  /* form elements do not inherit, so its common to do: */
+  /* button,input,textarea,select{font: inherit ;} */
+}
+
+p {
+  color: purple !important;
+}
+/* in below, one p is green bc its more specific, to overrun such cases, use the id method(rarely):  */
+
+/* we have specificity calculator  */
+
+/* element selector */
+
+.colour {
+  color: green;
+}
+/* class selector */
+
+#pring {
+  font-style: italic;
+  /* id selector, not recommended to use in css  */
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+/* multiple selection  */
+
+p span {
+  color: yellow;
+  text-transform: uppercase;
+  /* makes all capital */
+  background-color: black;
+  /* sets bg color  */
+}
+/* selector inside a selector(nested) */

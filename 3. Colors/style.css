@@ -1,0 +1,41 @@
+body {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: cadetblue;
+  /* this is my favourite color    */
+}
+
+.rgb {
+  background-color: rgb(123, 52, 52);
+}
+
+.rgba {
+  color: rgba(0, 0, 0, 0.3);
+  /* last value is alpha chanel, 0 means invisible, 1 means normal, and the other 3 values are for the colors of thee text hat we want to set for the given blcock of text */
+}
+
+/* hexadecimal goes from 0(black) to 9 and then from a to f(maximum, aka white)  */
+
+.hexadecimal {
+  color: #ffffff;
+  /* we can also write it as #fff */
+}
+
+/* .hsl { */
+/* just like rgb, and rgba, we have hsl and hsla */
+/* hue, saturation and luminance*/
+
+/* hue is which color, like pink, orange, yellow etc  */
+
+/* saturation means amount of color  */
+
+/* luminance/lightness is lightness of a color  */
+
+/* in short, hue=what color(0=red) */
+/* saturation=how much color */
+/* luminance=how light the color  */
+/* } */
+
+
+/* coolors.co color picker nd contrast checker */

@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 900px;
+  margin: 50px auto 0;
+  padding: 0px;
+  border: 3px solid black;
+  height: 300px;
+}
+.item1 {
+  background: orangered;
+}
+.item2 {
+  background: yellowgreen;
+  margin-right: 200px !important;
+  /* used imp as it was not working, see how it got separated bc of the margin, works like normal margin  */
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: hotpink;
+  flex-basis: 100px;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 10%;
+  width: 90px;
+  /* margin: auto; */
+  /* bc of margin auto, div got centererd */
+  /* so for vertical centring a div,margin top bottom is auto  */
+  /* for horizontal centering of div, set margin left and right to auto  */
+  /* for div to be centre of weboage, use margin: auto; */
+}
+
+.container {
+  display: flex;
+}

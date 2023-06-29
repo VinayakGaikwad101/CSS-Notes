@@ -1,0 +1,42 @@
+body {
+  background-color: cadetblue;
+}
+
+a {
+  /* text-decoration: none; */
+  font-weight: bolder;
+  color: black;
+  /* underline is default text decoration */
+  /* cursor: pointer is default  */
+
+  /* color: blue by default; */
+}
+
+/* pseudoclass is element:selctor  */
+
+a:visited {
+  color: purple;
+  /* it means the visited links color is purple */
+}
+
+a:hover,
+a:focus {
+  color: cadetblue;
+  background-color: black;
+  /* it means when we hover over the link  */
+
+  /* focus is means when users are tabbing thru links */
+  /* generally use hover and focus together */
+}
+
+a:active {
+  color: darkgreen;
+
+  /* it means the color is green the moment we click this link  */
+}
+
+/* for these properties to work, we use in following order visited, hover, focus, active (vhfa ) */
+
+/* generallu we do black color for links ith underline and tthese 4 pseudoclasses */
+
+/* good practise is to keep sl const in hsl and keep diff value for h in link color(a) and hover,ffocus */

@@ -1,0 +1,51 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
+.columns {
+  column-count: 4;
+  /* creates responsive columns(max 4)  */
+  column-width: 250px;
+  /* this shld never be less than 250px per column  */
+  /* so browser will show 4 columns for each  tag if each gets win width of 250px, else itll show less columns */
+  /* shortcut for above 2 lines is columns: 4 250px; */
+  column-rule: 3px solid palevioletred;
+  /* above is for column rule/line that separates, it is also responsive, so they also reduce/inc depending on the size of the browser 
+  */
+  column-gap: 3em;
+  /* above is spacing bw each individual column  */
+  .columns p {
+    margin-top: 0;
+  }
+}
+
+/* note that there is margin at top and bottom for each paragraph */
+
+.columns h2 {
+  margin-top: 0;
+  background-color: black;
+  color: white;
+  padding: 1em;
+  break-inside: avoid;
+
+  /* strange, the some part of padding of h2 goes in other column duringresiing of the webpage, to fix use break inside avoid */
+
+  break-before: column;
+  /* this results in the h2 not going at the bottom of any column at resizing, it means if we resize, then the h2 will remain at the top of column, so if we shrink to 1 column, the browser shrinks this column, so generally not a good idea to use  */
+}
+
+/* we can use symbols on our website using unicode-table.com, copy the html entity or the html code(generally this) then copy paste directly in our html   */
+
+.quote {
+  background: yellow;
+  text-align: center;
+  column-span: all;
+  /* it means this will be breaking all columns */
+  font-size: 4rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+  /* this makes the quote stay in 1 line  */
+}

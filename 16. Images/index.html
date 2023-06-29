@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Images</title>
+  </head>
+  <body>
+    <section class="example">
+      <p>
+        <img src="007.jpg" alt="img1" width="200" height="200" />
+        <!-- e will modify the height and width of the imae in css, but in case the css file fails to load. we use this method so that the browser reserves this much space for the image  -->
+        Yeah this is a Paragraph.
+        <!-- the image appears beforre the paragraph, because image is inline block and p is block  -->
+      </p>
+    </section>
+    <br />
+    <hr />
+    <br />
+    <section class="hero">
+      <figure class="profile-pic-figure">
+        <img
+          src="008.jpg"
+          alt="img2"
+          title="my prof pic"
+          width="800"
+          height="800"
+          class="meeting"
+        />
+        <figcaption class="offscreen">Meeting</figcaption>
+      </figure>
+      <h1 class="h1">
+        <span class="nowrap">Hello </span><span class="nowrap">I'm Jane</span>
+      </h1>
+    </section>
+  </body>
+</html>

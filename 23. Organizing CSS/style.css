@@ -1,0 +1,7 @@
+/* How to organize our css  */
+/* 1. Follow your team  */
+/* 2. Use comments to create headers/ dividers/labels */
+/* 3. sort properties alphabetically if possible abcss, like abc, so sort alphabetically */
+/* 4. to sort always within {} only, like box-sizinng coming before margin, and after margin we have padding */
+/* 5. to sort it, select everything inside the {}, then press ctrl+p, then type >sort then u get recommended: sort alphabetically option in vs code  */
+/* 6. for large projects on a team with naming convention methodology, follow it, popular one is BEN - block, element, modifier */

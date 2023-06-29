@@ -1,0 +1,79 @@
+body {
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* main is also block level elemeent  */
+main {
+  background: cadetblue;
+  width: 100%;
+}
+
+p {
+  background: lightgray;
+  margin-bottom: 2em;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/* p is block(all block elements have 100% width) so all line is of color  */
+
+.opposite {
+  background-color: black;
+  color: bisque;
+  margin-top: 3rem;
+  /* span is inline so we cannot modify its top and bottom margin, same for height, but for padding, it gets applied: */
+  padding: 4rem;
+  /* above overlaps the other things, because it is inline  */
+
+  /* display: inline is default; */
+
+  display: inline-block;
+  /* now it doesmt overlap, and now we can even modify its height, top width also and margin   */
+  margin-top: 10rem;
+  height: 20px;
+}
+
+nav {
+  background: black;
+}
+
+/* a is inline, but li is block level element  */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  background: black;
+  padding: 0.5em;
+}
+
+li {
+  display: inline-block;
+  /* this is why the li items are in one line, as now they are not block  */
+
+  margin-inline: 0.5em;
+  /* margin inline means left and right margin  */
+}
+
+/* inline element overlaps, but block/nline block doesnt actually overlap  */
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover,
+a:focus {
+  color: purple;
+}
+
+a:active {
+  color: red;
+}
+
+/* display none means completelu remobe it, it cannot be read by any assistive tech */

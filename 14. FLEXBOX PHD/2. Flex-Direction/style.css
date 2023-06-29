@@ -1,0 +1,64 @@
+/* flex-direction values: */
+/* row(default) */
+/* row-reverse */
+/* column */
+/* column-reverse */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 600px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+}
+.item1 {
+  background: orangered;
+}
+.item2 {
+  background: yellowgreen;
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: hotpink;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* how to apply flex:  */
+.container1 {
+  display: flex;
+  /* flex-direction i container related property so use here */
+  /* flex-direction: row; (default), means left to right   */
+  /* flex-direction: row-reverse; means right to left */
+  flex-direction: row;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* in concluion, flex is 1d, we can handle only ro or column, not both at same time, for that e have grid  */

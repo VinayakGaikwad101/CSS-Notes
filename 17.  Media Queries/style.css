@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 100vh;
+  background-color: chocolate;
+  background-image: radial-gradient(black, grey, white);
+  display: flex;
+  flex-direction: column;
+  /* this starts from center  */
+  /* note that black,grey,white radial gradient giuves an amazing effect :)  */
+}
+
+header,
+nav,
+main,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+nav {
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  border-bottom: 4px solid pink;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: black;
+  color: cornflowerblue;
+}
+
+header {
+  top: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* syntax of css media query:  */
+/* @media media_type and (condition:breakpoint) { */
+/* //CSS rule here  */
+/* } */
+
+/* most common media_type: all, print, speech  */
+/* min width 481px matlab ye styles/css rules 481px se lagenge, aur jab usse kam honge tab nahi lagenge  */
+
+/* jab wo () ke andar ke conditions satisfy honge, tabhi ye css apply hogi  */
+@media screen and (min-width: 576px) {
+  /* here min width, so this rule will start from this min width, if it was max width, the styles would be applied "till" that max width  */
+  /* and generally we do it for min width only, small first  */
+  /* it is easy to work with smallest and then to the largeest than the vice versa */
+  /* we can also do:- orientation: landspace, so that it will be applied as soon as orientation is landspace */
+  /* we also have min-aspect-ratio: 16/9, 16x is width and height is 9x in ratio */
+  body {
+    background-color: blue;
+    background-image: radial-gradient(blue, pink, red);
+  }
+
+  nav {
+    display: none;
+  }
+}

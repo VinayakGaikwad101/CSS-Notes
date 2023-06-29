@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 600px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+  height: 300px;
+  margin: 3px;
+}
+.item1 {
+  background: orangered;
+  align-self: center;
+}
+.item2 {
+  background: yellowgreen;
+  align-self: flex-end;
+}
+.item3 {
+  background: mediumpurple;
+  align-self: flex-start;
+}
+.item4 {
+  background: hotpink;
+  align-self: baseline;
+}
+.item5 {
+  background: rgb(20, 113, 18);
+  align-self: stretch;
+  /* default */
+}
+.item6 {
+  background: rgb(118, 105, 255);
+  align-self: auto;
+  /* it means this will take the value of align-items given to parent container  */
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: inherit;
+}
+
+/* how to apply flex:  */
+.container {
+  display: flex;
+  /* align self is same as align item, except auto  */
+  /* auto,flex-start,flex-end,center,stretch,baseline  */
+  /* this is used to give alignment to individual child  */
+  /* align self is directly applied to chidl but first give display: flex; to parent   */
+  align-items: center;
+  /* from here 6 took it by align-self: auto ; */
+}

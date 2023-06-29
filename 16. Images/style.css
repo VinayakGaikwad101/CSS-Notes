@@ -1,0 +1,93 @@
+/* begin reset  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* img { */
+/* display: block; */
+/* } */
+
+/* eng reset, so this is wht we sould do for every time we do a css reset */
+
+/* utility classes */
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -999999999px;
+}
+/* end utility clases  */
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100vh;
+}
+
+.hero {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  background-color: cadetblue;
+  background-image: url("030.jpg");
+  background-repeat: no-repeat;
+
+  /* we can set repeat-y alson or x also  */
+  /* for almost all image to cover, we background-size: cover */
+  background-size: cover;
+  /* we can also set this to contain, but then itll repeat  */
+
+  /* background-position: property tells whichpart of the image to display on the website ; */
+
+  /* we can use background-image: linear-gradient(to left, clr1, clr2,... ); */
+
+  /* we can add one image over another(works best for transparent) using the background-image: url(""), url(""); type, then we can also do background-position: img1, img2, then we can do background-repeat: repeatpropvalueforimg1, repeatpropvalueforimg2 */
+
+  /* to add text that is made up of background image (for beautiful looks), we first set the background image, then we write on it, then we clip it and then we set color: transparent; */
+  /* eg: */
+
+  /* fo chrome we need webkit, for other like firefox, we dont need, so we alays do both so whenever we are making a text made up of background so it is supported on all browsers */
+
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
+}
+
+.h1 {
+  font-size: 500%;
+  color: blanchedalmond;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+.example img {
+  width: 25%;
+  /* 25% of container size, so it is ressponsive with resect to the webpage  */
+  height: auto;
+  /* height changes with changes in width  */
+}
+/* image is inline-block so it acts as inline, hence why the border of red is a little bit below thee immage i the webpage  */
+/* to remove tht little space, we can use: display of ikmg to block */
+
+.profile-pic-figure {
+  width: 25%;
+  /* 25% of the webpage  */
+}
+
+.profile-pic-figure .meeting {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 5px double grey;
+  border-radius: 50%;
+}

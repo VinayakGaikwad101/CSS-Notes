@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 900px;
+  margin: 50px auto 0;
+  padding: 0px;
+  border: 3px solid black;
+  height: 50px;
+}
+.item1 {
+  background: orangered;
+}
+.item2 {
+  background: yellowgreen;
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: hotpink;
+  flex-basis: 100px;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+
+.container {
+  display: flex;
+}
+
+/* good fr responsive, as this keeps item width fixed inspite of windolength */
+/* flex basis is works like max width, used to handle width of objects,so it tays max width until we shrink till there is no space in its parent container, then iit start shrinking */
+
+/* for min width, put flexgrow in all elements(items) AND flexbasis in that one element  */
+
+/* for max width, just use flexbasis for that one element  */

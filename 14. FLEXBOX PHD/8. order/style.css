@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 300px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+  height: 200px;
+}
+.item1 {
+  background: orangered;
+  order: -1;
+}
+.item2 {
+  background: yellowgreen;
+  order: 0;
+}
+.item3 {
+  background: mediumpurple; 
+  order: -2;
+}
+.item4 {
+  background: hotpink;
+  order: -9;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  width: 50px;
+}
+
+.container {
+  display: flex;
+}
+
+/* order is usd to arraange elements in the flexbox by our specified order  */
+/* we spefiy it for each individual element, no for container, it is order:0 for all, and it goes from least(left) to greatest order(right) */

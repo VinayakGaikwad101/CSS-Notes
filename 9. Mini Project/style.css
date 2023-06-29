@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive, serif, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+nav {
+  border: 2px dotted red;
+  border-radius: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  /* so max width is 600px  */
+  font-size: 4rem;
+  line-height: 7rem;
+}
+
+h2 {
+  font-weight: 540;
+  padding: 1rem;
+  background-color: goldenrod;
+  border-radius: 2rem 2rem 0rem 0rem;
+  /* above is how we can feed 4 values to thhe border radius  */
+}
+
+ul {
+  list-style-position: inside;
+  list-style: none;
+}
+
+li {
+  border-top: 2px solid black;
+}
+a {
+  text-decoration: none;
+  display: block;
+  /* because of above 1 line, our hover works perfectly, have 100% width  */
+}
+
+/* remember v hf a 
+ */
+
+a:visited {
+  color: cadetblue;
+}
+
+a:hover,
+a:focus {
+  color: white;
+  background: black;
+}
+
+a:active {
+  color: darkcyan;
+  background: transparent;
+}
+
+li:nth-child(5) a {
+  border-radius: 0rem 0rem 2rem 2rem;
+
+  /* we can also use li:lastchild a{ also } */
+}

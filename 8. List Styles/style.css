@@ -1,0 +1,50 @@
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: darkcyan;
+}
+
+ol {
+  list-style-type: upper-roman;
+  /* styles added to bullet points in css  */
+  /* we can add attributes to our html also to the list  */
+  /* if we do list-style-type: none, then the style will be removed, but the list items will still be towards right indented, to remove that indent, we use padding: 0s; */
+}
+
+ul {
+  list-style-type: square;
+  text-align: center;
+  /* in some browsers the above property does not bring the bullet points to center with the lit items, so to bring them there, set :  */
+  list-style-position: inside;
+  /* if we set to outside then the bullet poijnts stay at the left  */
+  color: white;
+  line-height: 1.6;
+  list-style-image: url("images.png");
+}
+
+/* we can also do such that if square doesnt load then take up the url */
+
+ul {
+  list-style: square url("images.png") inside;
+}
+
+/* how to change specific list item:  */
+
+ul li:nth-child(2) {
+  /* 2 means 2nd li element from top  */
+  /* instead of number 2, we can do odd, so odd will be modified, same for even  */
+  color: brown;
+}
+
+/* pseudoclass is like a::after etc, but pseudoelement   begins with ::, eg:  */
+
+ol li::marker {
+    /* marker is to target the bullet points of ul and ol li elements */
+  /* we can use ::marker also to target all li elements of all lists(ul/ol ) */
+  color: red;
+  font-family: fantasy;
+  font-size: 3rem;
+  content: "Only $5";
+  /* content will replace the bullet pt, same for ul and ol  */
+}

@@ -1,0 +1,29 @@
+/* variables are used to change many values at once, like a color used multiple times, caan be replaced singlle handedly by changing it in one place  */
+
+/* we use :root pseudo class, it is at the apex level, even html inherits from this pseudo class  */
+
+:root {
+  /* we define variables in root always  */
+  /* variables names starrt with --  */
+  /* we name variables with upper case (good rule of thumb) */
+  --BGCOLOR: green;
+}
+/* now to use this variable in our css, we use var(--BGCOLOR); */
+
+body {
+  background-color: var(--BGCOLOR);
+}
+
+p {
+  background-color: black;
+  color: var(--BGCOLOR);
+}
+
+/* now the benefit of this is that we can change just --BGCOLOR and we are able to simultaneously the p color and body background color, very efficient */
+
+/* for dark mode, we define root{} inside media query, so we can redefine the variables too like this: */
+
+/* @media (prefers-color-scheme:dark) {} */
+/* if the user sets theme: dark on his laptop, we get this in dark mode, but if not then this media query is not executed */
+
+/* although we can do it using just variables and js also  */

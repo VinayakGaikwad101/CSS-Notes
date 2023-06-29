@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background: white;
+  width: 600px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 3px solid black;
+}
+.item1 {
+  background: orangered;
+}
+.item2 {
+  background: yellowgreen;
+}
+.item3 {
+  background: mediumpurple;
+}
+.item4 {
+  background: hotpink;
+}
+
+.items {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  /* justify-content is for horizontal arrangement --- and has 6 values:  */
+  /* flex-start */
+  /* flex-end */
+  /* center  */
+  /* space-around */
+  /* space-between */
+  /* space-evenly */
+  /* justify-content: center; (all came to center) */
+  /* justify-content: flex-end; (all went to right corner ) */
+  /* justify-content: start; (this is default, start from left ) */
+  /* justify-content: space-between; (1st and lasst element arranged at extreme points, rest are arranged symmetrically bw them ) */
+  /* justify-content: space-around; (like space between, but space between 1st and last element) */
+  /* justify-content: space-evenly; (equal space between all elements ) */
+}
